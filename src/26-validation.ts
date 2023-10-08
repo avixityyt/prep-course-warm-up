@@ -1,4 +1,4 @@
-export {};
+export { };
 
 /**
  * Complete the function to check if passed argument satisfies the following:
@@ -8,10 +8,15 @@ export {};
  *  - is not equal to any of the numbers in the array `excludedNums`
  */
 
-const excludedNums = [6, 14, 91, 111];
+const excludedNums: number[] = [6, 14, 91, 111];
 
 // You are allowed to edit only this function
-function validate(num) {}
+function validate(num: number | string): boolean {
+
+  return (typeof num == "number")
+    && (num % 1 == 0)
+    && (!excludedNums.some(n => n == num));
+}
 
 console.log(validate(6));
 console.log(validate(10.5));

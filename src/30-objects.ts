@@ -1,4 +1,4 @@
-export {};
+export { };
 
 /**
  * Ah, objects...
@@ -8,7 +8,6 @@ export {};
  * Luckily they're not so difficult to learn. As always w3schools will help:
  *  - https://www.w3schools.com/js/js_objects.asp
  */
-
 const books = [
   {
     title: "4 hour work week",
@@ -20,6 +19,8 @@ const books = [
   }
 ];
 
-const getTheTitles = () => {};
+const getTheTitles = (books: { title: string, author: string }[]): string[] => {
+  return books.map(item => item.title);
+};
 
 console.log(getTheTitles(books)); // Expected output: ['4 hour work week', 'Tools of Titans']

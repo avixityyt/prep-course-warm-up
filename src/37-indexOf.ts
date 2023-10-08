@@ -1,4 +1,4 @@
-export {};
+export { };
 
 /**
  * Write a function that removes an element form array.
@@ -8,7 +8,17 @@ export {};
  */
 
 // You are allowed to edit only this function
-function remove(arr, valueToRemove) {}
+function remove(arr: (number | string)[], valueToRemove: number | string): (number | string)[] {
+
+  let cleanedArr: (number | string)[] = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    if (valueToRemove != arr[i]) cleanedArr.push(arr[i]);
+  }
+
+  return cleanedArr;
+
+}
 
 const numbers = [1, 2, 3];
 const names = ["John", "Alice", "Ellen"];

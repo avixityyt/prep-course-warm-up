@@ -1,4 +1,4 @@
-export {};
+export { };
 
 /**
  * The good ol' this.. Possibly the most confusing topic in the whole language
@@ -11,10 +11,14 @@ export {};
  *  - https://www.youtube.com/watch?v=YOlr79NaAtQ (What is THIS in JavaScript? in 100 seconds)
  */
 
-function Circle(radius) {
+function Circle(radius: number) {
   this.radius = radius;
-  this.area = function() {};
-  this.perimeter = function() {};
+  this.area = function () {
+    return (Math.pow(this.radius, 2) * Math.PI).toFixed(2);
+  };
+  this.perimeter = function () {
+    return (this.radius * 2 * Math.PI).toFixed(2);
+  };
 }
 
 const c = new Circle(3);

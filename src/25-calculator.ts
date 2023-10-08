@@ -1,14 +1,35 @@
-export {};
+export { };
 
-function add() {}
+function add(num1: number, num2: number): number {
+    return [num1, num2].reduce((num1, num2) => num1 + num2);
+    // return num1 + num2;
+}
 
-function subtract() {}
+function subtract(num1: number, num2: number): number {
+    return [num1, num2].reduce((num1, num2) => num1 - num2);
+    // return num1 - num2;
+}
 
-function sum() {}
+function sum(num: number[]): number {
+    return num.reduce((num1, num2) => num1 + num2);
+}
 
-function multiply() {}
+function multiply(num: number[]): number {
+    return num.reduce((num1, num2) => num1 * num2);
+}
 
-function power() {}
+function power(num1: number, num2: number): number {
+
+    let result: number = 1;
+
+    for (let i = 0; i < num2; i++) {
+        result *= num1;
+    }
+
+    return result;
+
+    // Also can use this -> return Math.pow(num1, num2);
+}
 
 console.log(add(1, 2)); // Expected output: 3
 console.log(subtract(1, 2)); // Expected output: -1
