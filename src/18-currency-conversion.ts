@@ -1,4 +1,4 @@
-export {};
+export { };
 
 /**
  * Currency Formatting
@@ -8,7 +8,10 @@ export {};
  */
 
 // You are allowed to change only this function
-function convertToUSD() {}
+function convertToUSD(pound: number) {
+    const priceInDollars: number = pound * 1.4;
+    return priceInDollars.toFixed(2);
+}
 
 const product = "You don't know JS";
 const price = 19.99;
